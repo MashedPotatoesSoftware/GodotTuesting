@@ -7,6 +7,13 @@ extends KinematicBody2D
 # Member variables
 const MOTION_SPEED = 160 # Pixels/second
 
+func _process(delta):
+	var spr = get_node("sprite")
+	var clr = spr.get_modulate()
+	clr.r8 = (clr.r8 + 1) % 255 
+	clr.g8 = (clr.g8 - 1) % 255
+	
+	spr.set_modulate(clr)
 
 func _physics_process(delta):
 	var motion = Vector2()
@@ -24,7 +31,5 @@ func _physics_process(delta):
 
 	move_and_slide(motion)
 
-
-func _on_RigidBody2D_body_entered(body):
-
-	get_node("statusLabel").text = "YOU CROSSED!"
+func _on_PortalArea2D_body_entered(body):
+	get_tree().change_scene("res://second.tscn")
