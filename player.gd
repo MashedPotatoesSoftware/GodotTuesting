@@ -4,6 +4,11 @@ extends KinematicBody2D
 # This is a demo showing how KinematicBody2D
 # move_and_slide works.
 
+# just storing this here for now
+# oauth:1l1nh18ijf3bo9ep35b9ctxkk7ghtt
+# secret 74mhuaekox7hv2f5vxik7aw8ueblik
+# id 54lwmj41ncq8y3cmq0w4i4mlid7b0i
+
 # Member variables
 const MOTION_SPEED = 160 # Pixels/second
 
