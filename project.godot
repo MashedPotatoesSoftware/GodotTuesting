@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="Kinematic Collision"
-run/main_scene="res://second.tscn"
+run/main_scene="res://scenes/second.tscn"
 config/icon="res://icon.png"
 
 [gdnative]

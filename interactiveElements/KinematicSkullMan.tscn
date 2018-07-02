@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://png/0x72_16x16DungeonTileset.v4.png" type="Texture" id=1]
+
+[node name="KinematicSkullMan" type="KinematicBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "collision" ]
+
+[node name="SkullManSprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 10, 10 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 144, 16, 16 )
+region_filter_clip = true
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="CollisionPol" type="CollisionPolygon2D" parent="." index="1"]
+
+position = Vector2( 10, 10 )
+build_mode = 0
+polygon = PoolVector2Array( -10, 10, 10, 10, 10, -10, -10, -10 )
+_sections_unfolded = [ "Transform" ]
+
+
